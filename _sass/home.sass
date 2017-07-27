@@ -1,0 +1,248 @@
+.no-gutter
+  padding-left: 0
+  padding-right: 0
+
+@font-face
+  font-family: Gotham-Light
+  src: url('fonts/Gotham/Gotham-Light.otf')
+
+@font-face
+  font-family: Gotham-Bold
+  src: url('fonts/Gotham/Gotham-Bold.otf')
+
+@font-face
+  font-family: Gotham-Black
+  src: url('fonts/Gotham/Gotham-Black.otf')
+
+@font-face
+  font-family: Gotham-Medium
+  src: url('fonts/Gotham/Gotham-Medium.otf')
+
+.text-medium
+  font-family: "Gotham-Medium"
+
+
+
+body
+  margin-top: 50px
+  margin-bottom: 100px
+  font-family: "Gotham-Light"
+
+  .brand-logo-section
+    margin-bottom: 30px
+    .brand-logo
+      height: 170px
+
+  .header-section
+    text-align: center
+    .header-title
+      margin-top: 0px
+      font-family: "Gotham-Medium"
+    .header-address
+      font-size: 18px
+
+  .content-section
+    margin-top: 30px
+    .header-section
+      font-family: "Gotham-Medium"
+      font-size: 18px
+      margin-top: 0
+      margin-bottom: 5px
+    .header-title
+      display: block
+      font-size: 16px
+    .header-text
+      display: block
+      text-align: center
+    .header-deadline
+      color: #B71C1C
+      font-size: 18px
+      margin-bottom: 30px
+      text-align: center
+      font-family: "Gotham-Medium"
+
+    .form-item
+      margin-top: 15px
+      margin-bottom: 15px
+      .form-header
+        font-size: 16px
+        font-family: "Gotham-Medium"
+      .content-title
+        display: block
+      .radio-inline
+        margin-right: 15px
+      .content-input
+        font-size: 16px
+        border-radius: 0
+        border-top: none
+        border-left: none
+        border-right: none
+        box-shadow: none
+        background: none
+        box-sizing: border-box
+      .declaration
+        width: 30%
+        display: inline-block
+      .separator
+        display: inline-block
+        margin-left: 30px
+        margin-right: 30px
+      &.radio,  &.officer
+        .content-title
+          font-weight: bold
+          display: block
+          margin-top: 30px
+          margin-bottom: 15px
+      &.delegate-dietary
+        .content-title
+          font-weight: bold
+          margin-bottom: 15px
+          display: block
+      &.header-bottom
+        margin-top: 0
+        margin-bottom: 0
+      &.gala-dinner, &.city-tour, &.gala-dinner2, &.city-tour2
+        margin-top: 10px
+        .content-title
+          margin-top: 0
+          font-weight: bold
+          display: block
+          margin-bottom: 15px
+    .content-button-container
+      margin-top: 60px
+      #ss-submit
+        background-color: #3498db
+        color: white
+        text-transform: uppercase
+        border: none
+        box-shadow: none
+        padding: 15px 60px
+        display: table
+        margin-left: auto
+        margin-right: auto
+
+  .registration-container
+    position: relative
+    margin-top: 50px
+    margin-bottom: 50px
+    .delegate-choice-container
+      padding-left: 15px
+      padding-right: 15px
+      .form-header
+        font-size: 16px
+        font-family: "Gotham-Medium"
+  .accompanying-container
+    margin-top: 15px
+    margin-bottom: 30px
+    .form-header
+      font-size: 16px
+      font-family: "Gotham-Medium"
+
+  .bank-detail
+    float: left
+    margin-top: 15px
+    margin-bottom: 30px
+    .text-medium
+      margin-bottom: 15px
+    .table-content
+      margin-top: 15px
+      margin-bottom: 15px
+
+  .terms-container
+    float: left
+    ol
+      li
+        margin-bottom: 5px
+
+    .description
+      line-height: 24px
+
+
+  #formChoiceComplimentary
+    margin-top: 0
+
+  .payment-radio
+    margin-bottom: 30px
+
+
+
+.inputs--filled .content-label-animation
+  transform: translate(0, 0)
+  color: #3498db
+
+.inputs--invalid
+  .content-input-animation
+    animation: shake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both
+    background: url('ico-invalid.svg') center right no-repeat
+    border-bottom: 2px solid #f37b56
+    box-shadow: none
+    transform: translate3d(0, 0, 0)
+
+
+
+@keyframes shake
+  0%, 100%
+    transform: translate3d(0, 0, 0)
+
+  33%
+    transform: translate3d(-6px, 0, 0)
+
+  66%
+    transform: translate3d(6px, 0, 0)
+
+
+.content-label-animation
+  display: inline-block
+  transform: translate(0, 1.25rem)
+  transition: 0.15s
+  text-transform: uppercase
+
+
+
+.modal.fade
+  .modal-dialog
+    position: absolute
+    top: 40%
+    left: 0
+    right: 0
+    opacity: 0
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+
+  &.in .modal-dialog
+    margin-top: 0
+    margin-bottom: 0
+    position: absolute
+    top: 40%
+    opacity: 1
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
+
+
+.modal-content
+  border: none
+  border-radius: 2px
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  padding: 8% 5%
+  background-color: #3498db
+  .text-alert
+    margin: 20px auto
+    color: white
+    text-align: center
+
+
+
+
+
+

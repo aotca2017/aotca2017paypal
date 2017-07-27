@@ -1,0 +1,17 @@
+title: AOTCA 2017
+email:
+description: > #
+  Asia Oceania Tax Consultants' Association (AOTCA)
+url: http://www.aotca2017manila.com/
+baseurl: /aotca2017international/
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
