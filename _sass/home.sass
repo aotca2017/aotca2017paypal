@@ -21,6 +21,15 @@
 .text-medium
   font-family: "Gotham-Medium"
 
+.close-button
+  z-index: 5
+  position: absolute
+  top: -16px
+  opacity: 1
+  right: -19px
+  outline: none
+  &:hover
+    opacity: 1
 
 
 body
@@ -241,7 +250,16 @@ body
     color: white
     text-align: center
 
+@media (max-width: $screen-xs-max)
+  .modal-content
+    .text-alert
+      font-size: 24px
 
+  .modal-body
+    padding: 0
+  .close-button
+    top: -18px
+    right: -6px
 
 
 

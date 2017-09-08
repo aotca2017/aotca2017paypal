@@ -43,9 +43,6 @@ $("#form-content").submit(function(){
 $("#hidden_iframe").on('load',function () {
     $("#myModal").modal('show');
     $("#form-content")[0].reset();
-    setTimeout(function(){
-        $("#myModal").modal('hide');
-    }, 2000);
 });
 
 
@@ -90,7 +87,7 @@ $(function(){
         var $form = $(this).closest('form');
         // var $form = $("#form-content");
 
-        var $total = $form.find("[name='entry.2019220793']");
+        var $total = $form.find("[name='entry.1683301295']");
 
 
         if ($(e.target).is($total)) {
@@ -105,16 +102,16 @@ $(function(){
         var model = {};
         model.complimentary = data['entry.651229178'] == 'Complimentary';
 
-        var $companions = $form.find("[name='entry.350075210']");
+        var $companions = $form.find("[name='entry.484179990']");
         if ($companions.is(':visible')) {
-            model.companions = data['entry.350075210'];
+            model.companions = data['entry.484179990'];
         } else {
             model.companions = 0;
         }
 
-        model.courierRequested = data['entry.193270809'] == 'Send Invitation via Courier';
+        model.courierRequested = data['entry.593760817'] == 'Send Invitation via Courier';
         // model.paymentMethod = 'bank-deposit';
-        model.paymentMethod = data['entry.1146092643'];
+        model.paymentMethod = data['entry.1359092970'];
 
         var total = 0;
         if (!model.complimentary) {
@@ -134,6 +131,13 @@ $(function(){
                 total += 8.00;
             }
         }
+        //Paypal input checker
+        if(model.paymentMethod == 'paypal-payment'){
+            $(".paypal-input").attr("required", true);
+        } else{
+            $(".paypal-input").attr("required", false);
+        }
+
 
         $total.val(total);
 
