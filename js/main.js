@@ -115,20 +115,25 @@ $(function(){
 
         var total = 0;
         if (!model.complimentary) {
-            total += 300.00;
+            // total += 300.00;
+            total += 20.00;
         }
         if (model.companions) {
-            total += 200.00 * Number(model.companions);
+            // total += 200.00 * Number(model.companions);
+            total += 20.00 * Number(model.companions);
         }
         if (model.courierRequested) {
-            total += 20.00;
+            // total += 20.00;
+            total += 5.00;
         }
 
         if (total > 0) {
             if (model.paymentMethod == 'paypal-payment') {
-                total += 15.00;
+                // total += 15.00;
+                total += 0.00;
             } else {
-                total += 8.00;
+                // total += 8.00;
+                total += 0.00;
             }
         }
         //Paypal input checker
